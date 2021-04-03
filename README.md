@@ -4,5 +4,6 @@ This is my personal portfolio!
 
 ## Stack:
 
-- Next.js 🚀
+- Next.js ⚛️
 - Styled-Components 💅
+- Deployed with Netlify 🚀
