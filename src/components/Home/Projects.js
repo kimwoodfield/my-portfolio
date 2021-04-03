@@ -64,9 +64,9 @@ export default function Projects() {
                 <Line />
             </TitleWrap>
             <ProjectsWrap>
-                <ProjectCard title="Workout Tracker" url="../../static/hero-3.jpeg"description="An app that helps users log exercises and track workout progress." stack="NextJS, styled-components, Express" />
+                <ProjectCard title="Workout Tracker" url="../../static/hero-3.jpeg"description="An app that helps users log exercises and track workout progress. Currently in development." stack="Next.JS, Express, MySQL" />
                 <ProjectCard title="Anime Explorer" url="../../static/anime-explorer-screenshot.png"description="An anime search engine that assists users looking for new anime to watch." stack="JavaScript, Html, Css" github="https://github.com/kimwoodfield/anime-explorer" live="https://kimwoodfield.github.io/anime-explorer/" />
-                <ProjectCard title="Bookshelf" url="../../static/hero-3.jpeg"description="An app that allows users to store information regarding their favorite books." stack="Php, MySQL, CSS" />
+                <ProjectCard title="Personal Portfolio" url="../../static/portfolio-screenshot.png"description="The site you're on right now!" stack="Next.js, styled-components" github="https://github.com/kimwoodfield/my-portfolio" live="https://kimwoodfield.github.io/my-portfolio/"/>
             </ProjectsWrap>
         </Wrapper>
     )
