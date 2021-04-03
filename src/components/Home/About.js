@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.article`
-background: url('../../static/hero-9.jpg');
+background: url('/hero-9.jpg');
 background-size: cover;
 background-position: bottom;
     background-color: #424242;
