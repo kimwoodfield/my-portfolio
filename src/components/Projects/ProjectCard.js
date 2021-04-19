@@ -75,6 +75,7 @@ const DescriptionWrapper = styled.div`
     // border: 2px dashed yellow;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
+    overflow: hidden;
 
     @media (min-width: 700px) {
         height: 175px;
@@ -119,10 +120,12 @@ const Link = styled.a`
     }
 
     &:nth-child(1) {
-        font-size: 33px;
+        // font-size: 33px;
+        font-size: 27px;
     }
     &:nth-child(2) {
         padding-left: 7px;
+        font-size: 29px;
     }
 `
 

@@ -7,7 +7,7 @@ const Wrapper = styled.nav`
     align-items: center;
     justify-content: center;
     height: 60px;
-    width: 100vw;
+    width: 100%;
     background-color: #212121;
 `
 

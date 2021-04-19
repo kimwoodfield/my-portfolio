@@ -66,10 +66,12 @@ const Description = styled.p`
     width: 90%;
     line-height: 30px;
     padding-top: 10px;
+    padding: 0 25px;
     text-align: left;
 
     @media (min-width: 700px) {
         width: 630px;
+        padding: 0 20px;
     }
     @media (min-width: 1025px) {
         font-size: 20px;
