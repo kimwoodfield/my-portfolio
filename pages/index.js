@@ -19,7 +19,7 @@ export default function Home() {
       <Head>
         <title>Home | Kim's Hangout</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+    </Head>
       <Headline />
       <About />
       <Projects />
