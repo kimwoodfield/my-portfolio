@@ -109,17 +109,17 @@ const Stack = styled.p`
 
 const Link = styled.a`
     color: ${({ theme }) => theme.text};
-    transition: color 1s;
+    transition: 400ms color;
 
     &:hover {
         cursor: pointer;
+        color: #90a4ae;
     }
-
     &:nth-child(1) {
         font-size: 27px;
     }
     &:nth-child(2) {
-        padding-left: 7px;
+        margin-left: 7px;
         font-size: 29px;
     }
 `

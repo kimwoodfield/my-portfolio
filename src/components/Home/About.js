@@ -66,7 +66,7 @@ const Icons = styled.div`
   display: flex;
 
   & div:nth-child(2) {
-    padding-left:16px;
+    margin-left:16px;
 `
 
 const Icon = styled.div`
@@ -76,7 +76,11 @@ const Icon = styled.div`
 
 const IconLink = styled.a`
   color: ${({ theme }) => theme.text};
+  transition: 400ms color;
 
+  &:hover {
+    color: #90a4ae;
+  }
   &:visted {
     color: ${({ theme }) => theme.text};
   }
@@ -107,16 +111,16 @@ export default function About() {
         </p>
       </Description>
       <Icons>
-        <IconLink href="https://github.com/kimwoodfield">
-          <Icon>
+        <Icon>
+          <IconLink href="https://github.com/kimwoodfield">
             <AiOutlineGithub />
-          </Icon>
-        </IconLink>
-        <IconLink href="https://www.linkedin.com/in/kim-woodfield/">
-          <Icon>
+          </IconLink>
+        </Icon>
+        <Icon>
+          <IconLink href="https://www.linkedin.com/in/kim-woodfield/">
             <AiFillLinkedin />
-          </Icon>
-        </IconLink>
+          </IconLink>
+        </Icon>
       </Icons>
     </Wrapper>
   );
