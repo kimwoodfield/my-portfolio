@@ -48,9 +48,9 @@ export default function Headline() {
                 onClick={darkmode.toggle}
                 >
                 { theme === darkTheme ? (
-                    <BsMoon />
-                ) : (
                     <BsSun />
+                ) : (
+                    <BsMoon />
                 )
                 }
 
