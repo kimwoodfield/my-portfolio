@@ -48,7 +48,7 @@ const Title = styled.p`
 
 const Line = styled.hr`
   flex-grow: 2;
-  background-color: ${({ theme }) => theme.title};
+  background-color: ${({ theme }) => theme.text};
   border: none;
   outline: none;
   height: 3px;

@@ -25,7 +25,6 @@ const Image = styled.img`
 `
 
 const Title = styled.h2`
-  color: ${({ theme }) => theme.title};
   font-size: 40px;
   font-family: Roboto, sans-serf;
   font-weight: 900;

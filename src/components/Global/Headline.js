@@ -35,7 +35,6 @@ const Title = styled.a`
 `
 const Icon = styled.div`
     font-size: 24px;
-    color: ${({ theme }) => theme.text};
     cursor: pointer;
 `
 
