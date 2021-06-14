@@ -53,11 +53,12 @@ const TitleWrap = styled.div`
     align-items: center;
 
     @media (min-width: 700px) {
-        width: 630px;
+        // width: 630px;
     }
 
     @media (min-width: 1000px) {
         padding-top: 0;
+        max-width: 645.45px;
     }
 `
 
@@ -87,7 +88,11 @@ const IconWrapper = styled.div`
     flex-wrap: wrap;
 
     @media (min-width: 700px) {
-        width: 630px;
+        // max-width: 650px;
+    }
+
+    @media (min-width: 1000px) {
+        max-width: 650px;
     }
 `
 

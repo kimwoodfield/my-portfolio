@@ -9,8 +9,11 @@ const Wrapper = styled.article`
   text-align: left;
   padding: 25px;
   padding-bottom: 26px;
+  
+  @media (min-width: 1025px) {
+    max-width: 544px;
+  }
 
-  max-width: 544px;
 `;
 
 const ImageOutline = styled.div`

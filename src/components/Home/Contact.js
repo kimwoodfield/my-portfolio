@@ -28,10 +28,11 @@ const TitleWrap = styled.div`
     align-items: center;
 
     @media (min-width: 700px) {
-        width: 630px;
+        // width: 630px;
     }
     @media (min-width: 1000px) {
         padding-top: 0;
+        max-width: 645.45px
     }
 `
 
