@@ -3,33 +3,40 @@ import ProjectCard from "../Projects/ProjectCard";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  background-color: rgb(66, 66, 66);
-  // border: 2px dashed salmon;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 20px;
-  // padding-bottom: 100px;
+  padding: 25px;
+
+  @media (min-width: 1000px) {
+    padding-left: 50px;
+ }
+ @media (min-width: 1000px) {
+  padding-bottom: 0;
+}
 `;
 
 const TitleWrap = styled.div`
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
-  width: 90%;
   padding: 30px 0;
   display: flex;
   align-items: center;
+  width: 100%;
 
   @media (min-width: 700px) {
     width: 630px;
   }
+
+  @media (min-width: 1000px) {
+     padding-top: 0;
+  }
 `;
 
 const Title = styled.p`
-  color: #eeeeee;
   font-family: Roboto, sans-serif;
   font-size: 35px;
   font-weight: 700;
@@ -41,7 +48,7 @@ const Title = styled.p`
 
 const Line = styled.hr`
   flex-grow: 2;
-  background-color: #eeeeee;
+  background-color: ${({ theme }) => theme.title};
   border: none;
   outline: none;
   height: 3px;
@@ -53,7 +60,9 @@ const ProjectsWrap = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+
+
 `;
 
 export default function Projects() {

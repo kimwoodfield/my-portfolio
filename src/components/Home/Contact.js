@@ -4,13 +4,12 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Wrapper = styled.div`
-    background-color: rgb(66,66,66);
-    // border: 2px dashed salmon;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 25px;
     padding-top: 20px;
     padding-bottom: 50px;
 
@@ -23,7 +22,7 @@ const TitleWrap = styled.div`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
     padding: 30px 0;
     display: flex;
     align-items: center;
@@ -31,10 +30,13 @@ const TitleWrap = styled.div`
     @media (min-width: 700px) {
         width: 630px;
     }
+    @media (min-width: 1000px) {
+        padding-top: 0;
+    }
 `
 
 const Title = styled.p`
-    color: #EEEEEE;
+    // color: #EEEEEE;
     font-family: Roboto, sans-serif;
     font-size: 35px;
     font-weight: 700;
@@ -46,7 +48,7 @@ const Title = styled.p`
 
 const Description = styled.p`
     font-size: 18px;
-    color: #EEEEEE;
+    // color: #EEEEEE;
     font-family: Roboto, sans-serf;
     width: 90%;
     text-align: left;
@@ -84,7 +86,7 @@ const Link = styled.a`
 
 const Line = styled.hr`
     flex-grow: 2;
-    background-color: #EEEEEE;
+    background-color: ${({ theme }) => theme.title};
     border: none;
     outline: none;
     height: 3px;

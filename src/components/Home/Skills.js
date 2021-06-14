@@ -35,20 +35,19 @@ const StyledComponentsColor = '#DB7093;'
 const GitColor = '#F05032;'
 
 const Wrapper = styled.div`
-    background-color: rgb(66,66,66);
-    // border: 2px dashed salmon;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 25px;
 `
 
 const TitleWrap = styled.div`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
     padding: 30px 0;
     display: flex;
     align-items: center;
@@ -56,10 +55,13 @@ const TitleWrap = styled.div`
     @media (min-width: 700px) {
         width: 630px;
     }
+
+    @media (min-width: 1000px) {
+        padding-top: 0;
+    }
 `
 
 const Title = styled.p`
-    color: #EEEEEE;
     font-family: Roboto, sans-serif;
     font-size: 35px;
     font-weight: 700;
@@ -71,7 +73,7 @@ const Title = styled.p`
 
 const Line = styled.hr`
     flex-grow: 2;
-    background-color: #EEEEEE;
+    background-color: ${({ theme }) => theme.title};
     border: none;
     outline: none;
     height: 3px;

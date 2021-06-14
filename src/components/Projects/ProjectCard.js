@@ -6,13 +6,10 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     width: 310px;
-    background-color: rgb(66, 66, 66);
-    // border: 1px dashed green;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     padding-bottom: 20px;
-    width: 90%;
 
     @media (min-width: 700px) {
         flex-direction: row;
@@ -32,7 +29,6 @@ const TitleWrapper = styled.div`
 `
 
 const ProjectTitle = styled.h4`
-    color: #EEEEEE;
     font-family: Roboto, sans-serif;
     font-size: 24px;
     padding-bottom: 10px;
@@ -58,12 +54,11 @@ const Image = styled.img`
 `
 
 const DescriptionWrapper = styled.div`
-    background-color: rgba(33, 33, 33, 0.7);
+    background-color: ${({ theme }) => theme.cardBackground};
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    color: #757575;    
+    align-items: flex-start; 
     padding: 15px 15px 0 15px;
     margin: 0;
     box-sizing: border-box;
@@ -95,11 +90,13 @@ const IconWrap = styled.div`
     flex-direction: row;
     justify-content: flex-end;
     padding-top: 10px;
-
+    
+    @media (min-width: 700px) {
+        padding-right: 40px;
+    }
 `
 
 const Stack = styled.p`
-    color: #EEEEEE;
     font-family: Roboto, sans-serif;
     font-size: 12px;
     padding: 10px 0 10px 0;
@@ -111,16 +108,14 @@ const Stack = styled.p`
 `
 
 const Link = styled.a`
-    color: #9E9E9E;
+    color: ${({ theme }) => theme.text};
     transition: color 1s;
 
     &:hover {
-        color: white;
         cursor: pointer;
     }
 
     &:nth-child(1) {
-        // font-size: 33px;
         font-size: 27px;
     }
     &:nth-child(2) {
@@ -133,9 +128,14 @@ const DescLinkWrapper = styled.div`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    width: 100%;
+
+    @media (min-width: 375px) {
+        width: 333px;
+    }
 
     @media (min-width: 700px) {
-        padding-top: 37.5px;
+        padding-top: 39.5px;
     }
 `
 

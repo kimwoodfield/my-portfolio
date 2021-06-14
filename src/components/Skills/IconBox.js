@@ -2,8 +2,7 @@ import { MdLaptopChromebook } from "react-icons/md";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  background-color: rgba(33, 33, 33, 0.7);
-  color: gray;
+  background-color: ${({ theme }) => theme.cardBackground};
   padding: 0;
   margin: 8px;
   box-sizing: border-box;

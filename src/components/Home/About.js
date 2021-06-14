@@ -1,82 +1,54 @@
 import styled from "styled-components";
+import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Wrapper = styled.article`
-  background: url("/hero-9.jpg");
-  background-size: cover;
-  background-position: bottom;
-  background-color: #424242;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  height: 550px;
-  text-align: center;
+  text-align: left;
+  padding: 25px;
+  padding-bottom: 26px;
 
-  @media (min-width: 1025px) {
-    height: 92vh;
-    background-position: center left;
-  }
+  max-width: 544px;
 `;
 
-const Overlay = styled.div`
-  background-color: rgba(66, 66, 66, 0.8);
-  padding: 0;
+const ImageOutline = styled.div`
+  border: 5px solid #90a4ae;
   margin: 0;
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
+  padding: 8px;
+`
+
+const Image = styled.img`
+  width: 200px;
+  height: 200px;
+`
 
 const Title = styled.h2`
-  font-size: 45px;
-  color: #eeeeee;
+  color: ${({ theme }) => theme.title};
+  font-size: 40px;
   font-family: Roboto, sans-serf;
   font-weight: 900;
-  margin-top: 16px;
+  margin-top: 23px;
   margin-bottom: 5px;
-  padding: 5px;
+  line-height: 1.33
 
-  @media (min-width: 768px) {
-    font-size: 55px;
-  }
   @media (min-width: 1025px) {
-    font-size: 65px;
     margin-top: 0;
     padding: 0;
   }
 `;
 
-const Bio = styled.h3`
-  font-size: 20px;
-  color: #eeeeee;
+const Description = styled.div`
+  font-size: 16px;
   font-family: Roboto, sans-serf;
-  font-weight: 500;
-  margin-bottom: 30px;
-`;
-
-const Description = styled.p`
-  font-size: 18px;
-  color: #eeeeee;
-  font-family: Roboto, sans-serf;
-  width: 90%;
   line-height: 30px;
-  padding-top: 10px;
-  padding: 0 25px;
-  text-align: center;
+  padding: 16px 0;
+  text-align: left;
 
-  @media (min-width: 700px) {
-    width: 630px;
-    padding: 0 20px;
-  }
-  @media (min-width: 1025px) {
-    font-size: 20px;
-    padding-top: 0;
-  }
+  & p:nth-child(2) {
+    padding-top:16px;
+}
 `;
 
 const Link = styled.a`
@@ -88,22 +60,62 @@ const Link = styled.a`
   }
 `;
 
+const Icons = styled.div`
+  display: flex;
+
+  & div:nth-child(2) {
+    padding-left:16px;
+`
+
+const Icon = styled.div`
+  font-size: 28px;
+  cursor: pointer;
+`
+
+const IconLink = styled.a`
+  color: ${({ theme }) => theme.text};
+
+  &:visted {
+    color: ${({ theme }) => theme.text};
+  }
+  &:active {
+    color: ${({ theme }) => theme.text};
+  }
+
+  & div:nth-child(1) {
+    padding-right:16px;
+`
+
 export default function About() {
   return (
     <Wrapper>
-      <Overlay>
-        <Title>Hi, I'm Kim</Title>
-        <Bio>I build websites and stuff.</Bio>
-        <Description>
-          I work as a junior frontend developer at{" "}
+      <ImageOutline>
+        <Image src="/me.jpg" />
+      </ImageOutline>
+      <Title>Hi, I'm Kim.</Title>
+      <Description>
+        <p>
+          I'm currently a junior frontend developer at{" "}
           <Link href="https://thirteendigital.com.au" target="_blank">
             Thirteen Digital
-          </Link>
-          . <br />I enjoy exercising and trying new food in my spare time.{" "}
-          <br />
-          Stick around and watch this site transform over time.
-        </Description>
-      </Overlay>
+          </Link>. My main focus is frontend but I like working with backends and databases too!
+        </p>
+        <p>
+          When I'm not coding I'm either at the gym, trying a new restaurant or hanging with friends.
+        </p>
+      </Description>
+      <Icons>
+        <IconLink href="https://github.com/kimwoodfield">
+          <Icon>
+            <AiOutlineGithub />
+          </Icon>
+        </IconLink>
+        <IconLink href="https://www.linkedin.com/in/kim-woodfield/">
+          <Icon>
+            <AiFillLinkedin />
+          </Icon>
+        </IconLink>
+      </Icons>
     </Wrapper>
   );
 }
