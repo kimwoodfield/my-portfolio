@@ -7,9 +7,14 @@ import Head from "next/head";
 import useDarkMode from "use-dark-mode";
 
 function MyApp({ Component, pageProps }) {
+  const [isMounted, setIsMounted] = useState(false)
   const darkmode = useDarkMode(true);
   const theme = darkmode.value ? darkTheme : lightTheme;
-  {console.log(darkmode.value)}
+  
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   return (
     <React.Fragment>
       <Head>
@@ -17,7 +22,7 @@ function MyApp({ Component, pageProps }) {
      </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Component {...pageProps} />
+        {isMounted && <Component {...pageProps} />}
       </ThemeProvider>
     </React.Fragment>
   )

@@ -7,6 +7,7 @@ import {
   GlobalStyles,
 } from "../Global/ThemeConfig";
 import { BsSun, BsMoon } from "react-icons/bs";
+import { useState, useEffect } from "react";
 
 
 const Wrapper = styled.nav`
@@ -39,8 +40,14 @@ const Icon = styled.div`
 `
 
 export default function Headline() {
+    const [isMounted, setIsMounted] = useState(false);
     const darkmode = useDarkMode(true);
     const theme = darkmode.value ? darkTheme : lightTheme;
+
+    useEffect(() => {
+        setIsMounted(true);
+      }, []);
+
     return (
         <Wrapper>
             <Icon
@@ -48,9 +55,9 @@ export default function Headline() {
                 onClick={darkmode.toggle}
                 >
                 { theme === darkTheme ? (
-                    <BsSun />
-                ) : (
                     <BsMoon />
+                ) : (
+                    <BsSun />
                 )
                 }
 
