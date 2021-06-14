@@ -8,7 +8,7 @@ import useDarkMode from "use-dark-mode";
 
 function MyApp({ Component, pageProps }) {
   const darkmode = useDarkMode(true);
-  const theme = darkmode.value ? lightTheme : darkTheme;
+  const theme = darkmode.value ? darkTheme : lightTheme;
   {console.log(darkmode.value)}
   return (
     <React.Fragment>
