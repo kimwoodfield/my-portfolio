@@ -7,6 +7,8 @@ export const lightTheme = {
     toggleBorder: '#FFF',
     background: '#F7FAFC',
     cardBackground: '#d3d3d3',
+    secondaryColor: '#90A4AE',
+    secondaryBorder: '5px solid #90A4AE'
 };
 
 export const darkTheme = {
@@ -16,6 +18,8 @@ export const darkTheme = {
     toggleBorder: '#6B8096',
     background: '#131313',
     cardBackground: '#212121',
+    secondaryColor: '#BC8F8F',
+    secondaryBorder: '5px solid #BC8F8F'
 };
 
 export const GlobalStyles = createGlobalStyle`

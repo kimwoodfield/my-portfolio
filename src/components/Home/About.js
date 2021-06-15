@@ -17,7 +17,7 @@ const Wrapper = styled.article`
 `;
 
 const ImageOutline = styled.div`
-  border: 5px solid #90a4ae;
+  border: ${({ theme }) => theme.secondaryBorder};
   margin: 0;
   padding: 8px;
 `
@@ -54,7 +54,7 @@ const Description = styled.div`
 `;
 
 const Link = styled.a`
-  color: #90a4ae;
+  color: ${({ theme }) => theme.secondaryColor};
   text-decoration: none;
 
   &:hover {
@@ -79,7 +79,7 @@ const IconLink = styled.a`
   transition: 400ms color;
 
   &:hover {
-    color: #90a4ae;
+    color: ${({ theme }) => theme.secondaryColor};
   }
   &:visted {
     color: ${({ theme }) => theme.text};

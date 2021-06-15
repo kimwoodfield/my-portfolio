@@ -77,7 +77,7 @@ const IconWrapper = styled.div`
 `
 
 const Link = styled.a`
-    color: #90A4AE;
+    color: ${({ theme }) => theme.secondaryColor};
     text-decoration: none;
 
     &:hover {

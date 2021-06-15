@@ -113,7 +113,7 @@ const Link = styled.a`
 
     &:hover {
         cursor: pointer;
-        color: #90a4ae;
+        color: ${({ theme }) => theme.secondaryColor};
     }
     &:nth-child(1) {
         font-size: 27px;
