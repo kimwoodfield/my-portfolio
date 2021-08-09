@@ -31,25 +31,20 @@ const Title = styled.h2`
   font-size: 40px;
   font-family: Roboto, sans-serf;
   font-weight: 900;
-  margin-top: 23px;
-  margin-bottom: 5px;
-  line-height: 1.33
-
-  @media (min-width: 1025px) {
-    margin-top: 0;
-    padding: 0;
-  }
+  padding: 18px 0 10px 0;
 `;
 
 const Description = styled.div`
   font-size: 16px;
   font-family: Roboto, sans-serf;
   line-height: 30px;
-  padding: 16px 0;
   text-align: left;
+  padding: 0;
+  margin: 0;
 
   & p:nth-child(2) {
-    padding-top:16px;
+    /* padding-top:10px; */
+    margin-bottom: 20px;
 }
 `;
 
@@ -67,6 +62,7 @@ const Icons = styled.div`
 
   & div:nth-child(2) {
     margin-left:16px;
+  }
 `
 
 const Icon = styled.div`
@@ -90,6 +86,7 @@ const IconLink = styled.a`
 
   & div:nth-child(1) {
     padding-right:16px;
+  }
 `
 
 export default function About() {
@@ -101,10 +98,7 @@ export default function About() {
       <Title>Hi, I'm Kim.</Title>
       <Description>
         <p>
-          I'm currently a junior frontend developer at{" "}
-          <Link href="https://thirteendigital.com.au" target="_blank">
-            Thirteen Digital
-          </Link>. My main focus is frontend but I like working with backends and databases too!
+          I'm currently working as a full-stack developer. My main focus is frontend but I'm fascinated with all areas of an application.
         </p>
         <p>
           When I'm not coding I'm either at the gym, trying a new restaurant or hanging with friends.
